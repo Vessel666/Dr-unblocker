@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dr-unblocker
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        value: change_me_now
+      - key: SECRET_KEY
+        generateValue: true
