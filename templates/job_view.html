@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>Job Info - Dr Unblocker</title></head>
+<head><title>Job Info</title></head>
 <body>
     <h1>Job Details</h1>
     <p><strong>Name:</strong> {{ job.name }}</p>
@@ -8,6 +8,9 @@
     <p><strong>Service:</strong> {{ job.service }}</p>
     <p><strong>Urgency:</strong> {{ job.urgency }}</p>
     <p><strong>Notes:</strong> {{ job.notes or 'N/A' }}</p>
-    <p><small>Share this link to give client access to their job info.</small></p>
+    <h2>Uploaded Media</h2>
+    {% for file in job.media %}
+        <p><a href="{{ url_for('static', filename='uploads/' + file) }}">{{ file }}</a></p>
+    {% endfor %}
 </body>
 </html>

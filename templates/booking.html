@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Book a Job</title></head>
+<body>
+    <h1>Book a Drain Inspection</h1>
+    <form action="/book" method="post">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Address: <input type="text" name="address" required></label><br>
+        <label>Service:
+            <select name="service">
+                <option value="CCTV only">CCTV only</option>
+                <option value="Jetting only">Jetting only</option>
+                <option value="CCTV + Jetting" selected>CCTV + Jetting</option>
+            </select>
+        </label><br>
+        <label>Urgency:
+            <select name="urgency">
+                <option value="Urgent">Urgent</option>
+                <option value="Standard" selected>Standard</option>
+            </select>
+        </label><br>
+        <label>Notes:<br><textarea name="notes"></textarea></label><br>
+        <button type="submit">Submit Booking</button>
+    </form>
+</body>
+</html>
