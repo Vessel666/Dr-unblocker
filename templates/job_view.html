@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Job Info - Dr Unblocker</title></head>
+<body>
+    <h1>Job Details</h1>
+    <p><strong>Name:</strong> {{ job.name }}</p>
+    <p><strong>Address:</strong> {{ job.address }}</p>
+    <p><strong>Service:</strong> {{ job.service }}</p>
+    <p><strong>Urgency:</strong> {{ job.urgency }}</p>
+    <p><strong>Notes:</strong> {{ job.notes or 'N/A' }}</p>
+    <p><small>Share this link to give client access to their job info.</small></p>
+</body>
+</html>
